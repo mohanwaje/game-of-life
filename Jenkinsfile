@@ -29,7 +29,7 @@ pipeline {
 							
 								steps {
 											
-											sh "cd game-of-life && mvn clean install -DskipTests=true"
+											sh "mvn clean install"
 								
 								}
 				
