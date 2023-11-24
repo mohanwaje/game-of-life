@@ -29,7 +29,7 @@ pipeline {
 							
 								steps {
 											
-											sh "cd game-of-life && mvn clean install -DskipTests=true"
+											sh "mvn clean install -DskipTests=true"
 								
 								}
 				
@@ -38,7 +38,6 @@ pipeline {
 				stage ("COPY") {
 							
 							steps {
-										sh "rm -rf /mnt/projects/*"
 										sh "cp -r game-of-life/gameoflife-web/target/gameoflife.war /mnt/projects"
 							
 							}
